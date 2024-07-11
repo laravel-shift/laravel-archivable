@@ -29,7 +29,7 @@ class LaravelArchivableServiceProvider extends ServiceProvider
         });
 
         Blueprint::macro('dropArchivedAt', function ($column = 'archived_at') {
-            return $this->drop($column);
+            return $this->dropColumn($column);
         });
     }
 
