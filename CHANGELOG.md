@@ -2,6 +2,18 @@
 
 All notable changes to `laravel-archivable` will be documented in this file
 
+## v1.11.0 - 2024-07-11
+
+### What's Changed
+
+* [1.x] Fix down migration from dropping the entire table by [@rvzug](https://github.com/rvzug) in https://github.com/joelbutcher/laravel-archivable/pull/26
+
+### New Contributors
+
+* [@rvzug](https://github.com/rvzug) made their first contribution in https://github.com/joelbutcher/laravel-archivable/pull/26
+
+**Full Changelog**: https://github.com/joelbutcher/laravel-archivable/compare/v1.4.0...v1.11.0
+
 ## v1.4.0 - 2024-02-28
 
 ### What's Changed
