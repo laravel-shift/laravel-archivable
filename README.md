@@ -34,6 +34,14 @@ Schema::create('posts', function (Blueprint $table) {
 });
 ```
 
+##### Rollback
+
+```php
+Schema::create('posts', function (Blueprint $table) {
+    $table->dropArchivedAt();
+});
+```
+
 #### Eloquent
 You can now, safely, include the `Archivable` trait in your Eloquent model:
 
@@ -52,12 +60,15 @@ class Post extends Model {
 
 #### Extensions
 
-The extensions shipped with this trait include; `archive`, `unArchive`, `withArchived`, `withoutArchived`, `onlyArchived` and can be used accordingly:
+The extensions shipped with this trait include; `archive`, `unArchive`, `isArchived`, `withArchived`, `withoutArchived`, `onlyArchived` and can be used accordingly:
 
 ```php
 $user = User::first();
 $user->archive();
 $user->unArchive();
+
+// Check Archive status
+$user->isArchived();
 
 $usersWithArchived = User::query()->withArchived();
 $onlyArchivedUsers = User::query()->onlyArchived();
